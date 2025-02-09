@@ -14,6 +14,5 @@ const profesoresSchema = Schema({
     username:{
         type: String,
         required: true,
-        
     }
 })
