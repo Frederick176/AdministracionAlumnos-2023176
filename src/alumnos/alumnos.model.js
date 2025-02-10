@@ -25,6 +25,9 @@ const alumnosSchema = Schema({
         type: String,
         required: [true, "Pasword is required"]
     },
+    profilePicture:{
+        type: String
+    },
     role:{
         type: String,
         required: true,

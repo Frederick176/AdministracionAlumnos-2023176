@@ -6,8 +6,8 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
-import alumnoRoutes from "../src/user/alumno.routes.js"
-import profesorRoutes from "../src/pet/profesor.routes.js"
+import alumnoRoutes from "../src/alumnos"
+import profesorRoutes from "../src/profesores"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 
 const middlewares = (app) => {
