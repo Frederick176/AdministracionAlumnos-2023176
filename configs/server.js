@@ -6,8 +6,8 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
-import alumnoRoutes from "../src/alumnos"
-import profesorRoutes from "../src/profesores"
+import alumnosRoutes from "../src/alumnos/alumnos.routes.js"
+import profesoresRoutes from "../src/profesores/profesores.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 
 const middlewares = (app) => {
@@ -22,8 +22,8 @@ const middlewares = (app) => {
 const routes = (app) => {
     const routes = (app) =>{
         app.use("/administracionAlumnos/v1/auth", authRoutes)
-        app.use("/administracionAlumnos/v1/alumno", alumnoRoutes)
-        app.use("/administracionAlumnos/v1/profesor", profesorRoutes)
+        app.use("/administracionAlumnos/v1/alumno", alumnosRoutes)
+        app.use("/administracionAlumnos/v1/profesor", profesoresRoutes)
     }
 }
 
